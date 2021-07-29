@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@material-ui/core";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,  
+} from "react-router-dom";
+import Navigation from "./components/Navigation";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home"
+import Music from "./pages/Music";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+       <Box height='40px' width='100%' bgcolor='#fff' display='flex' justifyContent='center' alignItems='center'><p style={{color: 'black', padding:'5px', margin:0}}>This site is under construction</p></Box>
+      <Box >
+        <Navigation />
+        <Switch>
+        <Route path="/music" exact component={Music}/>
+          <Route path="/about" exact component={About}/>
+          <Route path="/contact" exact component={Contact}/>
+          <Route path="/" exact component={Home}/>
+        </Switch>
+      </Box>
+    </Router>
+  )
 }
 
-export default App;
+

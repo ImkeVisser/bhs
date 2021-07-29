@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: CodePredators-Regular;
+  src: url('./fonts/CodePredators-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+html{  
+  background-image: -webkit-radial-gradient(circle, rgba(0,0,5,1), rgba(0,0,0,1));
+  overflow:hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: ff-nuvo-mono-web-pro, sans-serif;
+  font-weight: 400; 
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:#fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000000;  
+  /* background: -webkit-linear-gradient(to right, #434343, #000000); 
+  background: linear-gradient(to right, #434343, #000000);*/
+
+  /* background: rgb(2,0,36);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(13, 13, 59) 35%, rgba(2,0,36,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%,rgba(27, 27, 37,1) 35%, rgba(2,0,36,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(27, 27, 59) 35%, rgba(2,0,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1); */
+
+  /* background: rgb(0,0,0);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(61, 61, 61)  71%, rgba(175,175,175,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(61, 61, 61)  71%, rgba(175,175,175,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(61, 61, 61) 71%, rgba(175,175,175,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#afafaf",GradientType=1); */
+
+  background: rgb(0,0,0);
+background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(59,89,125,1) 71%, rgba(39,43,47,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(59,89,125,1) 71%, rgba(39,43,47,1) 100%);
+background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(59,89,125,1) 71%, rgba(39,43,47,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#272b2f",GradientType=1);
+
+  /* background: rgb(0,0,0);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(101,101,101,1) 45%, rgba(12,12,13,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(101,101,101,1) 45%, rgba(12,12,13,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(101,101,101,1) 45%, rgba(12,12,13,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#020024",GradientType=1); */
+}
+
+h1{
+  font-family: CodePredators-Regular;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  opacity: .86;
 }
