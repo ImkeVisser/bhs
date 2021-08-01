@@ -1,31 +1,48 @@
 import { Box, makeStyles } from "@material-ui/core"
 import { FC } from "react"
-import './Home.styles.css'
+import '../styles/Home.styles.css'
 
 const useStyles = makeStyles(theme => ({
-    container: {
-        height: '100%',
-        textAlign:'center',
-        padding:theme.spacing(2),
-        marginTop:'12rem',
-    },
+    containerTitle: {
+      textAlign:'center',
+      padding:theme.spacing(2),
+      marginTop:'12rem',
+  },
     title: {
-        fontSize: '4rem',        
+      fontFamily: 'CodePredators-Regular',
+      fontWeight: 700,
+      fontStyle: 'normal',
+      opacity: .6,
+      fontSize: '8rem', 
+        [theme.breakpoints.down('lg')]: {
+          fontSize: '6rem',
+        },       
         [theme.breakpoints.down('md')]: {
-            fontSize: '3rem',
+            fontSize: '5rem',
           },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem',
+            fontSize: '3rem',
           },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '1.4rem',
+            fontSize: '2rem',
           },
     },
     tagline:{
-        opacity: '60%',
-        fontFamily: 'termina,sans-serif',
-        fontWeight: 500,
-        fontStyle: 'normal',
+      marginTop: theme.spacing(6),
+      opacity:.8,
+      fontSize: '1.6rem',
+        [theme.breakpoints.down('lg')]: {
+          fontSize: '1.4rem',
+        },       
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.2rem',
+          },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1rem',
+          },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '.8rem',
+          },
     }
   }))
 
@@ -33,24 +50,24 @@ const Home: FC = () => {
     const styles = useStyles()
 
     return(
-    <>
-      <Box className={styles.container}><h1 className={styles.title}>BlackHoleSounds</h1><p className={styles.tagline}>Sound Design - Music for Media Productions and Events</p></Box>
+      <Box className="background">
+      <Box className={styles.containerTitle}><h1 className={styles.title}>BlackHoleSounds</h1><p className={styles.tagline}>Sound Design - Music for Media Productions and Events</p></Box>
       <div className="space"></div>
-      <div className="container">
-        <div className="wrapper">
-          <div className="blackhole">
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
-            <div className="debris"></div>
+        <div className="container">
+          <div className="wrapper">
+            <div className="blackhole">
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+              <div className="debris"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+    </Box>
   )
 }
 

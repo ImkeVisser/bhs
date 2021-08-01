@@ -14,7 +14,7 @@ import Music from "./pages/Music";
 export default function App() {
   return (
     <Router>
-       <Box height='40px' width='100%' bgcolor='#fff' display='flex' justifyContent='center' alignItems='center'><p style={{color: 'black', padding:'5px', margin:0}}>This site is under construction</p></Box>
+       {/* <Box height='40px' width='100%' bgcolor='#fff' display='flex' justifyContent='center' alignItems='center'><p style={{color: 'black', padding:'5px', margin:0}}>This site is under construction</p></Box> */}
       <Box >
         <Navigation />
         <Switch>

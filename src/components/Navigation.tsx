@@ -3,7 +3,6 @@ import { FC, useState } from "react"
 import { Link } from "react-router-dom"
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { Height } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     navbar: {
@@ -17,24 +16,28 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'ff-nuvo-mono-web-pro,sans-serif',
         fontWeight: 900,
         fontStyle: 'normal',
-        color: '#ffffff',
-        opacity: '87%',
+        fontSize: theme.spacing(3),
+        color:'#fffaf0',
+        opacity: .8,
         textDecoration:'none',
         }
     },
     menu: {
-        color: '#ffffff',
-        opacity: '87%',        
+        color:'#fffaf0',
+        opacity: .8,
+        zIndex: 10,     
     },
     navMenu: {
         width: '100%',
         height:'100%',
         position:'absolute',
         top:0,
-        zIndex:5,
-        background: '#232526', 
+        zIndex:1,
+        backgroundColor: 'rgb(5,0,0)',
+        background: 'linear-gradient(to right, #000000, #434343);' ,
     },
     menuList: {
+        marginTop: theme.spacing(16),
         padding:0,
         listStyle:'none',
         display:'flex',
@@ -45,8 +48,8 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(3),
     },
     '& > li > a': {
-        color: '#ffffff',
-        opacity: '87%',
+        color:'#fffaf0',
+        opacity: .8,
         textDecoration:'none',
         fontSize:'2rem',
     }
@@ -57,23 +60,22 @@ const Navigation: FC = () => {
 const [menuOpen, setMenuOpen] = useState<Boolean>(false)
 const styles = useStyles()
 
+console.log(menuOpen)
+
     return(
     <nav>
         <Box className={styles.navbar}>
         <Box className={styles.home}>
         <Link to="/">BHS</Link>
         </Box>
-        <IconButton className={styles.menu} aria-label="menu" onClick={()=> setMenuOpen(!menuOpen)} >
-           <MenuIcon fontSize="large" />
+        <IconButton className={styles.menu}  aria-label="menu" onClick={()=> {
+          setMenuOpen(!menuOpen)
+        }} >
+           {menuOpen ?  <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
         </IconButton>
         </Box>
         {menuOpen && 
         <Box className={styles.navMenu}>
-        <Box display='flex' justifyContent='flex-end' p={3}>
-            <IconButton className={styles.menu} aria-label="menu" onClick={()=> setMenuOpen(!menuOpen)} >
-                <CloseIcon fontSize="large" />
-            </IconButton>  
-        </Box>         
           <ul className={styles.menuList}>
           <li onClick={()=> setMenuOpen(false)}>
               <Link to="/music">Music</Link>

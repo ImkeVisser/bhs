@@ -3,13 +3,19 @@ import { FC } from "react"
 
 const Contact: FC = () => {
 
-    return(<Box p={3} m='0 auto' maxWidth='200px' style={{opacity:'60%'}}>
+return(
+    <Box display='flex' justifyContent='center' alignItems='center' style={{opacity:'60%'}}>
+        <Box mt={16}>
             <h2 >Contact</h2>
+            <Box mt={3}>
             <p>Dave Kooyman</p>
+            </Box>
             <p>Blackholesounds.com</p>
             <p>Kvknr: 34317982</p>
             <p>info@blackholesounds.com</p>
-            </Box>)
+        </Box>
+    </Box>
+    )
 }
 
 export default Contact
